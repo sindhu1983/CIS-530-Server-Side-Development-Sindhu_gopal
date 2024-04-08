@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta Charset="UTF-8">
+    <title> BookClub | Contact Us. </title>
+
+    <!-- BootStrap Style Sheet CDN-->
+    <link href="https://cdn.jsdelivr.net/npm/bootsrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="StyleSheet"
+        integrity="SHA384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0yz1ztcQTwFspd3yD65VohhpuuC0mLASJC"
+        crossorigin="anonymous">
+
+    <link rel="StyleSheet"
+    href="http://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="SHA384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+    crossorigin="anonymous">
+</head>
+    <body>
+        <div th:insert="~{fragments/header :: header}"></div>
+
+        <div class="container py-5" style="width: 50%;">
+        <div class="row">
+        <div class="col-12 text-center"
+        <h1> Welcome to the Contact Page. </h1>
+        </div>
+        </div>
+        <!-- Start of the row-->
+        <div Class="row" >
+         <!--Start of the 6 Column -->
+         <div class="Col-6">
+            <div Class="Row tax-center">
+                <div Class="col-12">
+
+                    <h1><i Class="fas fa-location-arrow text-secondary"></i></h1>
+                </div>   
+            </div>
+
+            <div Class="Row tax-center">
+                <div Class="col-12">
+                    <ul Class="list-group">
+                        <li Class="list-group-item border-0">1000 Galvin Road South</li>
+                        <li Class="list-group-item border-0">Bellevue, Nebraska 68005</li>
+                    </ul>
+
+
+                </div>   
+            </div>
+         </div>
+         <!-- End of Six Column -->
+
+         <!-- Start of the Six Column-->
+         <div Class="Col-6">
+         <div Class="Row tax-center">
+            <div Class="col-12">
+
+                <h1><i Class="fas fa-location-arrow text-secondary"></i></h1>
+            </div> 
+         </div>
+         
+         <div Class="Row tax-center">
+            <div Class="col-12">
+                <ul Class="list-group">
+                    <li Class="list-group-item border-0">Direct: 555.555.5555</li>
+                    <li Class="list-group-item border-0">Toll-Free: 1.800.555.5555</li>
+                    <li Class="list-group-item border-0">FAX: 1.800.555.5555</li>
+                </ul>
+        </div>
+        </div>
+    </div>
+    <!-- End of Six Column -->
+    </div>
+    <!-- End of Row-->
+</div>
+
+<div th:insert="~{fragments/scriptFooter :: scriptFooter}"></div>
+    </body>
+</html>
+
+
