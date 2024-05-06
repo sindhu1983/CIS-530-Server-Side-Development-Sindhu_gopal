@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta Charset="UTF-8">
+    <title> BookClub | View </title>
+
+    <!-- BootStrap Style Sheet CDN-->
+    <link href="https://cdn.jsdelivr.net/npm/bootsrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="StyleSheet"
+        integrity="SHA384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0yz1ztcQTwFspd3yD65VohhpuuC0mLASJC"
+        crossorigin="anonymous">
+
+    <link rel="StyleSheet"
+    href="http://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="SHA384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+    crossorigin="anonymous">
+</head>
+    <body>
+        <main>
+            <form action="#" th:action="@{/wishlist}" th:object="${wishlistItem}" method="post">
+                <a href="/wishlist" th:href="@{/}"> Return to wishlist </a>
+            </form>
+
+
+            <div class="mb-3">
+                                
+                <input type="text" class="form-control" id="isbn" name="isbn" th:field="#{isbn}" />
+                <small th:if="${#fields.haserrors('isbn')}" style="color:red;" th:errors="#{isbn}"></small>
+            </div>
+        </main>
+    </body>
+</html>
