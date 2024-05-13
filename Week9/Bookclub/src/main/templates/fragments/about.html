@@ -1,0 +1,40 @@
+!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta Charset="UTF-8">
+    <title> BookClub | About Us. </title>
+
+    <!-- BootStrap Style Sheet CDN-->
+    <link href="https://cdn.jsdelivr.net/npm/bootsrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="StyleSheet"
+        integrity="SHA384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0yz1ztcQTwFspd3yD65VohhpuuC0mLASJC"
+        crossorigin="anonymous">
+
+    <link rel="StyleSheet"
+    href="http://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="SHA384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+    crossorigin="anonymous">
+</head>
+    <body>
+        <div th:insert="~{fragments/header :: header}"></div>
+        <h1> Welcome to the About Us Page. </h1>
+        </div>
+        <main>
+            <Section class="py-5 text-center container">
+                <div Class="py-lg-5">
+                    <div Class="Col-lg-6 col-md-8 mx-auto">
+                        <h1 class="fw-light"> Book Club </h1>
+                        <p Class="lead text-muted"> 
+                            You are on the About Us page. The Book club was started by X in 2000 and has successful completed 24 long years serving the 
+                            community. we are available 24X7 and has a collection of books that are catered across young or old. 
+                        </p>
+                    </div>
+
+                </div>
+            </Section>
+        </main>
+        <div th:insert="~{fragments/Footer :: Footer}"></div>
+        <div th:insert="~{fragments/scriptFooter :: scriptFooter}"></div>
+    </body>
+</html>
+
