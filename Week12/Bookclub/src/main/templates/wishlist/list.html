@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta Charset="UTF-8">
+    <title> BookClub | View </title>
+
+    <!-- BootStrap Style Sheet CDN-->
+    <link href="https://cdn.jsdelivr.net/npm/bootsrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="StyleSheet"
+        integrity="SHA384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0yz1ztcQTwFspd3yD65VohhpuuC0mLASJC"
+        crossorigin="anonymous">
+
+    <link rel="StyleSheet"
+    href="http://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="SHA384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+    crossorigin="anonymous">
+</head>
+    <body>
+        <main>
+            <a href="/wishlist/new" th:href="@{/wishlist/new}" class="btn btn-outline secondary text-center"> New Wishlist Item </a>
+        </main>
+    </body>
+
+    function buildTable(books){
+        let tableString = '<table class="table"><tr> <th>ISBN</th> <th> Title</th> <th>Functions</th> </tr></table>';
+        For (let book of books){
+            tableString += '<tr> <td>${book.isbn}</td> <td>${book.title}</td>'
+            <td>
+                <a href="/wishlist/${book.id}" th:href="@{Wishlist/${book.id}">Edit</a>
+                <a href="/wishlist/remove/${book.id}" th:href="@{Wishlist/remove/${book.id}">Delete</a>
+            </td>
+        </tr>
+        }
+
+        tableString += '</table>'
+        
+        return tableString;
+    }
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+    <head></head>
+    <Body>
+        <header th:fragment=""header">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="/">Bookclub</a>
+                    <button class="navbar-toggler" type="Button"
+                    data-bs-toggle="Collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle Navigation">
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul Class="navbar-Nav">
+                        <li Class="nav-item">
+                            <a Class="nav-link" href="/about" th:href="@{/about}">about us</a>
+                        </li>
+
+                        <!--Restrict the visibility of the link to only admin users. -->
+                        <li Class="nav-item" sec:authorize="hasRole('ADMIN')">
+                            <a href="/monthly-books" class ="nav-link" th:href="@{/monthly-books}">Monthly Books</a>
+                        </li>
+
+                        <li Class="nav-item">
+                            <a Class="nav-link" href="/Contact" th:href="@{/Contact}">Contact us</a>
+                        </li>
+				   <li Class="nav-item">
+                            <a Class="nav-link" href="/wishlist" th:href="@{/wishlist}">wishlist</a>
+                        </li>
+
+                    </ul>
+                </div>
+                
+                    <div class="nav navbar-nav ml-auto w-100 justify-content-center ">
+                        <div authorize="isAuthenticated()">
+                            logged in as <strong  authentication="name"></strong> 
+                        </div>
+                        <ul class="nav navbar-nav ml-auto w-100 justify-content-end ">
+                            <liv class="nav-item float-end">
+                                <a href="/logout"th:href="@{/logout}" class="nav-link float-end">logout</a>
+                            </liv>
+                        </ul>
+
+                    </div>
+
+
+            </nav>
+        
+        </header>
+
+
+    </Body>
+
+</html>
